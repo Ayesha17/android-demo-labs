@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">myuiapp</string>
+    <string name="text_view_name">viewname</string>
+    <string name="button1_name">button1name</string>
+    <string name="button2_name">button2name</string>
+</resources>
