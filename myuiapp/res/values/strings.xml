@@ -4,4 +4,5 @@
     <string name="text_view_name">viewname</string>
     <string name="button1_name">button1name</string>
     <string name="button2_name">button2name</string>
+    <string name="go">go</string>
 </resources>
