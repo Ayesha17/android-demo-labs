@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">firstapp</string>
+    <string name="edit_message">edit message</string>
+    <string name="send_button">send</string>
+
+    <string name="action_search">search</string>
+    <string name="action_settings">settings</string>
+
+
+
+</resources>
