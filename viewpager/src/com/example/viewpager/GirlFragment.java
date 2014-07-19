@@ -17,7 +17,6 @@ import android.widget.TextView;
  */
 public class GirlFragment extends Fragment{
 
-
     private int resId;
 
     public GirlFragment(int resId) {
