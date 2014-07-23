@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     
-    <string-array name="entries_list_preference">
-        <item>Alpha Option 01</item>
-        <item>Beta Option 02</item>
-        <item>Charlie Option 03</item>  
+    <string-array name="font_size_key_options">
+        <item>小(10px)</item>
+        <item>中(20px)</item>
+        <item>大(30px)</item>
     </string-array>
 
-    <string-array name="entryvalues_list_preference">
-        <item>Alpha</item>
-        <item>Beta</item>
-        <item>Charlie</item>
+    <string-array name="font_size_value_options">
+        <item>10</item>
+        <item>20</item>
+        <item>30</item>
     </string-array>
 
 </resources>

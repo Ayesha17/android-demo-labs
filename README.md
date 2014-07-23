@@ -46,8 +46,9 @@ android-demo-labs
 ### 参考
 
 [Using PreferenceFragment to Store User Preferences](http://www.cs.dartmouth.edu/~campbell/cs65/lecture12/lecture12.html)
-> 并且附demo
+[Android: Using Switch Preference pre API level 14](http://stackoverflow.com/questions/9505901/android-using-switch-preference-pre-api-level-14)
 
-> 未完
+
+
 
 
