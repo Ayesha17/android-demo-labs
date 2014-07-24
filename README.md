@@ -50,5 +50,17 @@ android-demo-labs
 
 
 
+## photoWallFalls (瀑布流图片demo)
+
+### 知识点：
+
+多任务异步下载,自定义scrollView,图片压缩等
+
+
+### 参考
+
+[Android瀑布流照片墙实现，体验不规则排列的美感](http://blog.csdn.net/guolin_blog/article/details/10470797)
+[Android异步消息处理机制完全解析，带你从源码的角度彻底理解](http://blog.csdn.net/guolin_blog/article/details/9991569)
+[Android AsyncTask完全解析，带你从源码的角度彻底理解](http://blog.csdn.net/guolin_blog/article/details/11711405)
 
 
