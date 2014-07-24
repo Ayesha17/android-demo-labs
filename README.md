@@ -20,7 +20,9 @@ android-demo-labs
 ### 参考：
 
 [Android ActionBar完全解析，使用官方推荐的最佳导航栏(上)](http://blog.csdn.net/guolin_blog/article/details/18234477)
+
 [Android ActionBar完全解析，使用官方推荐的最佳导航栏(下)](http://blog.csdn.net/guolin_blog/article/details/25466665)
+
 [Android Working with Action Bar](http://www.androidhive.info/2013/11/android-working-with-action-bar/)
 
 
@@ -46,6 +48,7 @@ android-demo-labs
 ### 参考
 
 [Using PreferenceFragment to Store User Preferences](http://www.cs.dartmouth.edu/~campbell/cs65/lecture12/lecture12.html)
+
 [Android: Using Switch Preference pre API level 14](http://stackoverflow.com/questions/9505901/android-using-switch-preference-pre-api-level-14)
 
 
@@ -60,7 +63,9 @@ android-demo-labs
 ### 参考
 
 [Android瀑布流照片墙实现，体验不规则排列的美感](http://blog.csdn.net/guolin_blog/article/details/10470797)
+
 [Android异步消息处理机制完全解析，带你从源码的角度彻底理解](http://blog.csdn.net/guolin_blog/article/details/9991569)
+
 [Android AsyncTask完全解析，带你从源码的角度彻底理解](http://blog.csdn.net/guolin_blog/article/details/11711405)
 
 
