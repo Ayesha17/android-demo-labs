@@ -79,9 +79,7 @@ android-demo-labs
 |------|----|
 |TabActivity01|借助TabActivity实现旧的tab页切换demo1|
 |TabActivity02|借助TabActivity实现旧的tab页切换demo2|
-
-
-
+|TabActivity03|组合 TabHost + Fragment 实现tab页切换,并且将其置于视图底部|
 
 
 

@@ -44,6 +44,15 @@ public class MainActivity extends Activity {
                         Intent intent2 = new Intent(MainActivity.this,TabActivity02.class);
                         startActivity(intent2);
 
+                        break;
+
+                    case 2:
+
+                        Intent intent3 = new Intent(MainActivity.this,TabActivity03.class);
+                        startActivity(intent3);
+
+                        break;
+
 
 
                 }
@@ -66,6 +75,8 @@ public class MainActivity extends Activity {
         items.add("TabActivity demo 1");
 
         items.add("TabActivity demo 2");
+
+        items.add("TabActivity demo 3");
 
         return items;
     }
