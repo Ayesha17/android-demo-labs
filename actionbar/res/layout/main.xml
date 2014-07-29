@@ -4,10 +4,45 @@
               android:layout_width="fill_parent"
               android:layout_height="fill_parent"
         >
-    <TextView
+    <Button
+            android:id="@+id/actionbar_bt"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Hello World, MyActivity"
+            android:text="actionbar01"
             />
+    <Button
+            android:id="@+id/actionbar02_bt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="actionbar02"
+            />
+    <Button
+            android:id="@+id/actionbar03_bt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="actionbar03"
+            />
+
+    <Button
+            android:id="@+id/actionbar04_bt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="actionbar04"
+            />
+    <Button
+            android:id="@+id/actionbar05_bt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="actionbar05"
+            />
+
+    <Button
+            android:id="@+id/actionbar06_bt"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="actionbar06"
+            />
+
+
 </LinearLayout>
 

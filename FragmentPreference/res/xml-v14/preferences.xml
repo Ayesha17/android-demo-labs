@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <PreferenceCategory
+            android:title="聊天设置">
+            
+        <SwitchPreference
+                android:key="autoBack"
+                android:title="自动回复"
+                android:summaryOn="开启"
+                android:summaryOff="关闭" />
+
+        <SwitchPreference
+                android:key="enterBack"
+                android:title="按回车键回复"
+                android:summaryOn="开启"
+                android:summaryOff="关闭" />
+
+        <ListPreference
+                android:key="fontSize"
+                android:title="字体大小"
+                android:summary="中"
+                android:entries="@array/font_size_key_options"
+                android:entryValues="@array/font_size_value_options"
+                android:dialogTitle="请选择" />
+
+    </PreferenceCategory>
+                
+    <PreferenceCategory
+            android:title="微信设置">
+
+        <Preference
+                android:icon="@drawable/ic_launcher"
+                android:title="Custom Preference"
+                android:summary="This works almost like a button"
+                android:key="customPref" />
+
+        <EditTextPreference
+                android:key="email"
+                android:title="Email地址"
+                android:summary="点击修改"
+                android:dialogTitle="Email地址" />
+
+        <PreferenceScreen
+                android:key="screen_preference"
+                android:title="更多设置"
+                android:summary="@string/summary_screen_preference">
+
+            <!-- You can place more preferences here that will be shown on the next screen. -->
+            <SwitchPreference
+                    android:key="next_screen_checkbox_preference"
+                    android:title="@string/title_next_screen_toggle_preference"
+                    android:summary="@string/summary_next_screen_toggle_preference" />
+
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+            android:title="其他设置">
+
+        <!-- This PreferenceScreen tag serves as a screen break (similar to page break
+             in word processing). Like for other preference types, we assign a key
+             here so it is able to save and restore its instance state. -->
+
+        <PreferenceScreen
+                android:title="访问官网"
+                android:summary="http://baidu.com/">
+
+            <intent android:action="android.intent.action.VIEW"
+                    android:data="http://baidu.com/" />
+
+        </PreferenceScreen>
+
+    </PreferenceCategory>
+    
+
+
+    
+</PreferenceScreen>
