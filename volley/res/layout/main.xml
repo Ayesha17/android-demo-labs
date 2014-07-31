@@ -29,5 +29,33 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
+    <Button
+            android:id="@+id/bt05"
+            android:text="请求返回图片"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <ImageView
+            android:id="@+id/avatar_iv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/default_avatar"
+            android:layout_gravity="center"
+            />
+
+    <Button
+            android:id="@+id/bt06"
+            android:text="请求返回图片(利用缓存)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <ImageView
+            android:id="@+id/avatar_iv02"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/default_avatar"
+            android:layout_gravity="center"
+            />
+
 </LinearLayout>
 
