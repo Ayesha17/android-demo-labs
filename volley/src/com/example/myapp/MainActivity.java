@@ -27,10 +27,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private Button bt04;
     private Button bt05;
     private Button bt06;
+    private Button bt07;
 
 
     private ImageView avatarIv;
     private ImageView avatarIv02;
+    private NetworkImageView networkImageView;
 
     private RequestQueue requestQueue;
 
@@ -48,9 +50,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
         bt04 = (Button) findViewById(R.id.bt04);
         bt05 = (Button) findViewById(R.id.bt05);
         bt06 = (Button) findViewById(R.id.bt06);
+        bt07 = (Button) findViewById(R.id.bt07);
 
         avatarIv = (ImageView) findViewById(R.id.avatar_iv);
         avatarIv02 = (ImageView) findViewById(R.id.avatar_iv02);
+        networkImageView = (NetworkImageView) findViewById(R.id.network_iv);
 
 
         bt01.setOnClickListener(this);
@@ -59,9 +63,16 @@ public class MainActivity extends Activity implements View.OnClickListener {
         bt04.setOnClickListener(this);
         bt05.setOnClickListener(this);
         bt06.setOnClickListener(this);
+        bt07.setOnClickListener(this);
 
 
         requestQueue = Volley.newRequestQueue(this);
+
+        // 6  networkImageView use step
+        ImageLoader imageLoader = new ImageLoader(requestQueue, new BitmapCache());
+        networkImageView.setDefaultImageResId(R.drawable.default_avatar);
+        networkImageView.setErrorImageResId(R.drawable.default_avatar);
+        networkImageView.setImageUrl("https://avatars2.githubusercontent.com/u/3411696?v=1&u=99bb4fbf59180e167fa607ad940c12d5dfa88733&s=140", imageLoader);
 
 
     }
@@ -88,6 +99,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 break;
             case R.id.bt06:
                 imageLoaderRequest();
+                break;
+            case R.id.bt07:
+                gsonRequest();
                 break;
 
         }
@@ -163,7 +177,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                         try {
                             Log.d(TAG, (response.getJSONObject("weatherinfo")).toString());
                         } catch (JSONException e) {
-                            Log.e(TAG,e.getMessage(),e);
+                            Log.e(TAG, e.getMessage(), e);
                         }
 
                     }
@@ -179,23 +193,23 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     }
 
-    public void jsonArrayRequest(){
+    public void jsonArrayRequest() {
 
         // 如果服务器返回的不是json数组，则解析会出错
         JsonArrayRequest jsonArrayRequest = new JsonArrayRequest("http://m.weather.com.cn/data/101010100.html",
-                new Response.Listener<JSONArray>(){
+                new Response.Listener<JSONArray>() {
                     @Override
                     public void onResponse(JSONArray response) {
                         Log.d(TAG, response.toString());
 
                     }
                 },
-                new Response.ErrorListener(){
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.e(TAG, error.getMessage(), error);
-            }
-        }
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Log.e(TAG, error.getMessage(), error);
+                    }
+                }
         );
 
         requestQueue.add(jsonArrayRequest);
@@ -203,7 +217,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     }
 
 
-    public void imageRequest(){
+    public void imageRequest() {
 
         // 1：url
         // 2：成功回掉
@@ -223,14 +237,15 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 Log.e(TAG, error.getMessage(), error);
                 avatarIv.setImageResource(R.drawable.default_avatar);
             }
-        });
+        }
+        );
 
         requestQueue.add(imageRequest);
 
     }
 
 
-    public void imageLoaderRequest(){
+    public void imageLoaderRequest() {
 
         ImageLoader imageLoader = new ImageLoader(requestQueue, new BitmapCache());
 
@@ -238,7 +253,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
         ImageLoader.ImageListener listener = ImageLoader.getImageListener(avatarIv02,
                 R.drawable.default_avatar, R.drawable.default_avatar);
 
-        imageLoader.get("https://avatars2.githubusercontent.com/u/3411696?v=1&u=99bb4fbf59180e167fa607ad940c12d5dfa88733&s=140",listener);
+        imageLoader.get("https://avatars2.githubusercontent.com/u/3411696?v=1&u=99bb4fbf59180e167fa607ad940c12d5dfa88733&s=140", listener);
 
     }
 
@@ -272,5 +287,30 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
     }
 
+
+    private void gsonRequest() {
+
+        GsonRequest<Weather> gsonRequest = new GsonRequest<Weather>("http://m.weather.com.cn/data/101010100.html", Weather.class,
+                new Response.Listener<Weather>() {
+                    @Override
+                    public void onResponse(Weather weather) {
+
+                        WeatherInfo weatherInfo = weather.getWeatherinfo();
+                        Log.d(TAG, "city is " + weatherInfo.getCity());
+                        Log.d(TAG, "temp is " + weatherInfo.getTemp());
+                        Log.d(TAG, "time is " + weatherInfo.getTime());
+
+                    }
+                }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                Log.e(TAG, error.getMessage(), error);
+            }
+        }
+        );
+
+        requestQueue.add(gsonRequest);
+
+    }
 
 }
