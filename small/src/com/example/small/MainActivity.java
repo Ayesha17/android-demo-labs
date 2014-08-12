@@ -6,10 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+import com.example.small.vo.Person;
+import com.example.small.vo.User;
 
 public class MainActivity extends Activity implements View.OnClickListener{
 
     private Button exitBtn;
+    private Button intentObjTransferBtn;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -17,7 +20,10 @@ public class MainActivity extends Activity implements View.OnClickListener{
         setContentView(R.layout.main);
 
         exitBtn = (Button)findViewById(R.id.exit_btn);
+        intentObjTransferBtn = (Button)findViewById(R.id.intent_obj_transfer_btn);
+
         exitBtn.setOnClickListener(this);
+        intentObjTransferBtn.setOnClickListener(this);
 
     }
 
@@ -30,6 +36,25 @@ public class MainActivity extends Activity implements View.OnClickListener{
 
                 Intent intent01 = new Intent(this,Activity01.class);
                 startActivity(intent01);
+
+                break;
+
+            case R.id.intent_obj_transfer_btn:
+
+                Intent intent02 = new Intent(this,Activity02.class);
+
+//                1.
+//                User user = new User();
+//                user.uid = 1;
+//                user.name = "TechBirds";
+//                intent02.putExtra("user_data",user);
+
+//                2.
+//                Person person = new Person();
+//                person.uid = 1;
+//                person.name = "TechBirds";
+//
+//                intent02.putExtra("person_data",person);
 
                 break;
 

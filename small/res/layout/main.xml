@@ -10,6 +10,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
+    <Button android:id="@+id/global_context_btn"
+            android:text="全局Context对象(MyApplication)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button android:id="@+id/intent_obj_transfer_btn"
+            android:text="intent对象传递(序列化/分解方式)"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
 
 </LinearLayout>
 
