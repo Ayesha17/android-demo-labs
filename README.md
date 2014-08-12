@@ -88,6 +88,7 @@ android-demo-labs
 [Android TabActivity之感叹](http://bbs.51cto.com/thread-1012907-1.html)
 
 
+
 ## Volley
 
 ### 介绍
@@ -102,6 +103,22 @@ android-demo-labs
 ### 参考
 
 [Android Volley系列](http://blog.csdn.net/guolin_blog/article/details/17482095)
+
+## Broadcast 大喇叭
+
+### 介绍
+
+不要在广播中添加过多的逻辑或者进行任何耗时的操作，因为在广播中不允许开启线程的，当onReceive方法运行了较长时间而没有结束，程序就回报错。
+因此，一般建议在广播接收器中完成打开程序或者组建的角色。
+
+### demo
+
+1. 系统广播之网络状态变更广播【动态注册】
+2. 系统广播之系统启动广播【静态注册】
+3. 自定义广播【静态注册】
+4. 自定义广播之发送有序广播【静态注册】
+5. 自定义本地广播之发送标准广播【动态注册】
+
 
 
 ## Service组件基本使用

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+        >
+
+    <Button android:id="@+id/receive_network_system_broadcast"
+            android:text="系统广播之网络状态变更广播【动态注册】"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button android:id="@+id/receive_boot_system_broadcast"
+            android:text="系统广播之系统启动广播【静态注册】"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    <Button android:id="@+id/receive_custom_broadcast"
+            android:text="自定义广播【静态注册】"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button android:id="@+id/receive_custom_order_broadcast"
+            android:text="自定义广播之发送有序广播【静态注册】"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    <Button android:id="@+id/receive_local_custom_broadcast"
+            android:text="自定义本地广播之发送标准广播【动态注册】"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+</LinearLayout>
+
