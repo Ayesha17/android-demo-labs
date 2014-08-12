@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+        >
+
+    <Button android:id="@+id/service_start_btn"
+            android:text="service启动"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    <Button android:id="@+id/service_stop_btn"
+            android:text="service停止"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    <Button android:id="@+id/service_bind_btn"
+            android:text="service绑定"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    <Button android:id="@+id/service_unbind_btn"
+            android:text="service解绑"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    <Button android:id="@+id/service_standard_bind_btn"
+            android:text="标准Service绑定"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    <Button android:id="@+id/service_standard_unbind_btn"
+            android:text="标准Service解绑"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    <Button android:id="@+id/service_fore_ground_start_btn"
+            android:text="前台Service启动"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    <Button android:id="@+id/service_fore_ground_stop_btn"
+            android:text="前台Service停止"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+</LinearLayout>
+
