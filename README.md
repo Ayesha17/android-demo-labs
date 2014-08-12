@@ -89,7 +89,7 @@ android-demo-labs
 
 
 
-## Volley
+## Volley(网络编程)
 
 ### 介绍
 
@@ -157,6 +157,28 @@ Service作为Android四大组件之一，在每一个应用程序中都扮演着
 
 >跨进程共享Service(demo略)
 
+6. IntentService
+
+> 综合了标准service以及自动关闭service(stopself)的优点而出现的
+
+7. 最佳实践(定时执行任务)
+
+两种方案：
+
+1. 无需setRepeating
+
+2. 需要setRepeating
+
+
+### 重点
+
+关于service生命周期
+
+1. 如果service分别由bind和start方式启动，那么销毁该service必须经过unbind以及stop该service
+
+2. service其实是在主线程中工作的，为此需要在子线程中进行耗时操作
+
+
 ### 参考
 
 [Android Service完全解析，关于服务你所需知道的一切(上)](http://blog.csdn.net/guolin_blog/article/details/11952435)
@@ -186,6 +208,27 @@ Service作为Android四大组件之一，在每一个应用程序中都扮演着
 [Android异步消息处理机制完全解析，带你从源码的角度彻底理解](http://blog.csdn.net/guolin_blog/article/details/9991569)
 
 
+
+## Android网络编程之HttpUrlConnection和HttpClient-Http请求
+
+
+### Demo
+
+1. HttpURLConnection请求
+
+
+2. HttpClient请求
+
+
+3. HttpURLConnection最佳实践
+
+> 耗时操作必须在子线程操作否则会堵塞主线程。然而正因为在子线程中操作，网络请求返回的结果不可能直接通过return返回()。为此引进回调机制。
+
+
+### 参考
+
+《第一行代码》(网络编程章节)
+ 
 
 
 
