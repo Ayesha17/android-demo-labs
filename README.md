@@ -129,6 +129,68 @@ android-demo-labs
 
 
 
+## Service组件基本使用
+
+### 介绍
+
+Service作为Android四大组件之一，在每一个应用程序中都扮演着非常重要的角色。它主要用于在后台处理一些耗时的逻辑，或者去执行某些需要长期运行的任务。必要的时候我们甚至可以在程序退出的情况下，让Service在后台继续保持运行状态。
+
+### demo
+
+1. 服务的启动/停止(Activity与Service弱关联)
+
+>简单使用Activity启动Service
+
+2. 服务的绑定/解绑(Activity与Service强关联)
+
+>指定Service执行某具体任务
+
+3. 标准Service
+
+>Service内创建子线程来执行任务
+
+4. 前台Service的启动/停止
+
+>防止内存不足而被回收，而前台service不会被回收
+
+5. 远程Service
+
+>跨进程共享Service(demo略)
+
+### 参考
+
+[Android Service完全解析，关于服务你所需知道的一切(上)](http://blog.csdn.net/guolin_blog/article/details/11952435)
+
+[Android Service完全解析，关于服务你所需知道的一切(下)](http://blog.csdn.net/guolin_blog/article/details/9797169)
+
+ 
+## Android异步处理(Asynchronous processing)
+
+### 需求描述/问题解决
+
+#### 需求描述
+
+有一个耗时的操作(例如，网络读取数据或者本地读取较大文件)，并同时需要根据所得数据进行UI操作。如果放在主线程中(UI线程)，那么app会出现"强制关闭"的错误，因此只能放在子线程中。但是问题又来了，主线程(UI线程)是非线程安全的，因此如果在子线程中同时进行UI操作，那么程序容易奔溃。
+
+#### 问题解决
+
+为此我们使用异步消息处理机制来解决该问题(Thread + Handler)。
+
+### Demo
+
+1. Thread + Handler
+
+
+### 参考
+
+[Android异步消息处理机制完全解析，带你从源码的角度彻底理解](http://blog.csdn.net/guolin_blog/article/details/9991569)
+
+
+
+
+
+
+
 
 
 
