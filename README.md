@@ -126,6 +126,10 @@ android-demo-labs
 
 1. 退出确认功能
 
+2. 全局获取Context
+
+3. Intent对象传递
+
 
 
 

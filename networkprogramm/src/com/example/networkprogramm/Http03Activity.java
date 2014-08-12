@@ -74,9 +74,11 @@ public class Http03Activity extends Activity implements View.OnClickListener{
                     @Override
                     public void onError(Exception e) {
 
-                        Message message = new Message();
-                        message.what = Constant.SHOW_ERROR;
-                        handler.sendMessage(message);
+//                        Message message = new Message();
+//                        message.what = Constant.SHOW_ERROR;
+//                        handler.sendMessage(message);
+
+
 
                     }
                 });
