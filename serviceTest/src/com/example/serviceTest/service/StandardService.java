@@ -17,22 +17,26 @@ public class StandardService extends Service {
 
     private final static String TAG = " StandardService ";
 
-    private MyBinder myBinder;
+    private MyBinder myBinder = new MyBinder();
 
     @Override
     public void onCreate() {
         super.onCreate();    //To change body of overridden methods use File | Settings | File Templates.
 
-        Log.d(TAG, " onCreate ");
+        Log.d("onCreate", Thread.currentThread().getId() + "");
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
 
+        Log.d("onStartCommand",Thread.currentThread().getId() + "");
+
         new Thread(new Runnable() {
             @Override
             public void run() {
-                Log.d(TAG," onStartCommand ");
+
+                Log.d("onStartCommand sub",Thread.currentThread().getId() + "");
+
             }
         }).start();
 
@@ -44,7 +48,7 @@ public class StandardService extends Service {
     public void onDestroy() {
         super.onDestroy();    //To change body of overridden methods use File | Settings | File Templates.
 
-        Log.d(TAG," onDestroy ");
+        Log.d("onDestroy",Thread.currentThread().getId() + "");
     }
 
 
@@ -57,11 +61,15 @@ public class StandardService extends Service {
 
         public void startDownload(){
 
+            Log.d("startDownload",Thread.currentThread().getId() + "");
+
             new Thread(new Runnable() {
                 @Override
                 public void run() {
                     //To change body of implemented methods use File | Settings | File Templates.
-                    Log.d(TAG," start download ... ");
+
+                    Log.d("startDownload sub",Thread.currentThread().getId() + "");
+
                 }
             }).start();
 

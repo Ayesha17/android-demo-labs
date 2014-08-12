@@ -17,5 +17,22 @@
         <service android:name=".service.MyService01">
         </service>
 
+        <service android:name=".service.MyService02">
+        </service>
+
+        <service android:name=".service.StandardService">
+        </service>
+
+        <service android:name=".service.ForeGroundService">
+        </service>
+
+        <service android:name=".service.MyIntentService">
+        </service>
+
+        <service android:name=".service.AlarmRunningService">
+        </service>
+
+        <receiver android:name=".broadcast.AlarmReceiver" />
+
     </application>
 </manifest>

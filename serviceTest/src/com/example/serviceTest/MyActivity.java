@@ -8,21 +8,22 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.view.View;
 import android.widget.Button;
-import com.example.serviceTest.service.ForeGroundService;
-import com.example.serviceTest.service.MyService01;
-import com.example.serviceTest.service.MyService02;
-import com.example.serviceTest.service.StandardService;
+import com.example.serviceTest.service.*;
 
 public class MyActivity extends Activity implements View.OnClickListener{
 
     private Button serviceStartBtn;
     private Button serviceStopBtn;
-    private Button serviceBindBtn;
-    private Button serviceUnBindBtn;
+    private Button service2StartBtn;
+    private Button service2StopBtn;
+    private Button service2BindBtn;
+    private Button service2UnBindBtn;
     private Button serviceStandardBindBtn;
     private Button serviceStandardUnBindBtn;
     private Button serviceForeGroundStartBtn;
     private Button serviceForeGroundStopBtn;
+    private Button serviceIntentStartBtn;
+    private Button serviceAlarmStartBtn;
 
     private  MyService02.MyBinder myBinder01;
     private StandardService.MyBinder myBinder02;
@@ -79,21 +80,29 @@ public class MyActivity extends Activity implements View.OnClickListener{
 
         serviceStartBtn = (Button) findViewById(R.id.service_start_btn);
         serviceStopBtn = (Button) findViewById(R.id.service_stop_btn);
-        serviceBindBtn = (Button) findViewById(R.id.service_bind_btn);
-        serviceUnBindBtn = (Button) findViewById(R.id.service_unbind_btn);
+        service2StartBtn = (Button) findViewById(R.id.service2_start_btn);
+        service2StopBtn = (Button) findViewById(R.id.service2_stop_btn);
+        service2BindBtn = (Button) findViewById(R.id.service2_bind_btn);
+        service2UnBindBtn = (Button) findViewById(R.id.service2_unbind_btn);
         serviceStandardBindBtn = (Button) findViewById(R.id.service_standard_bind_btn);
         serviceStandardUnBindBtn = (Button) findViewById(R.id.service_standard_unbind_btn);
         serviceForeGroundStartBtn = (Button) findViewById(R.id.service_fore_ground_start_btn);
         serviceForeGroundStopBtn = (Button) findViewById(R.id.service_fore_ground_stop_btn);
+        serviceIntentStartBtn = (Button) findViewById(R.id.service_intent_start_btn);
+        serviceAlarmStartBtn = (Button) findViewById(R.id.service_alarm_start_btn);
 
         serviceStartBtn.setOnClickListener(this);
         serviceStopBtn.setOnClickListener(this);
-        serviceBindBtn.setOnClickListener(this);
-        serviceUnBindBtn.setOnClickListener(this);
+        service2StartBtn.setOnClickListener(this);
+        service2StopBtn.setOnClickListener(this);
+        service2BindBtn.setOnClickListener(this);
+        service2UnBindBtn.setOnClickListener(this);
         serviceStandardBindBtn.setOnClickListener(this);
         serviceStandardUnBindBtn.setOnClickListener(this);
         serviceForeGroundStartBtn.setOnClickListener(this);
         serviceForeGroundStopBtn.setOnClickListener(this);
+        serviceIntentStartBtn.setOnClickListener(this);
+        serviceAlarmStartBtn.setOnClickListener(this);
 
     }
 
@@ -109,11 +118,19 @@ public class MyActivity extends Activity implements View.OnClickListener{
                 Intent stopIntent = new Intent(this, MyService01.class);
                 stopService(stopIntent);
                 break;
-            case R.id.service_bind_btn :
+            case R.id.service2_start_btn :
+                Intent startIntent2 = new Intent(this, MyService02.class);
+                startService(startIntent2);
+                break;
+            case R.id.service2_stop_btn :
+                Intent stopIntent2 = new Intent(this, MyService02.class);
+                stopService(stopIntent2);
+                break;
+            case R.id.service2_bind_btn :
                 Intent bindIntent = new Intent(this,MyService02.class);
                 bindService(bindIntent,connection1,BIND_AUTO_CREATE);
                 break;
-            case R.id.service_unbind_btn :
+            case R.id.service2_unbind_btn :
                 unbindService(connection1);
                 break;
             case R.id.service_standard_bind_btn :
@@ -122,6 +139,7 @@ public class MyActivity extends Activity implements View.OnClickListener{
                 break;
             case R.id.service_standard_unbind_btn :
                 unbindService(connection2);
+                break;
             case R.id.service_fore_ground_start_btn :
                 Intent foreGroundStartIntent = new Intent(this, ForeGroundService.class);
                 startService(foreGroundStartIntent);
@@ -129,6 +147,19 @@ public class MyActivity extends Activity implements View.OnClickListener{
             case R.id.service_fore_ground_stop_btn :
                 Intent foreGroundStopIntent = new Intent(this, ForeGroundService.class);
                 stopService(foreGroundStopIntent);
+                break;
+            case R.id.service_intent_start_btn:
+                Intent myStartIntent = new Intent(this, MyIntentService.class);
+                startService(myStartIntent);
+                break;
+
+            case R.id.service_alarm_start_btn:
+
+                Intent alarmStartIntent = new Intent(this,AlarmRunningService.class);
+                startService(alarmStartIntent);
+
+                break;
+
             default:
                 break;
 

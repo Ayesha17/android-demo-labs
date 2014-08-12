@@ -15,21 +15,19 @@ import android.util.Log;
 
 public class MyService02 extends Service {
 
-    private final static String TAG = " MyService02 ";
     private MyBinder myBinder = new MyBinder();
-
 
     @Override
     public void onCreate() {
         super.onCreate();    //To change body of overridden methods use File | Settings | File Templates.
 
-        Log.d(TAG," onCreate ");
+        Log.d("onCreate",Thread.currentThread().getId() + "");
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
 
-        Log.d(TAG," onStartCommand ");
+        Log.d("onStartCommand",Thread.currentThread().getId() + "");
 
         return super.onStartCommand(intent, flags, startId);    //To change body of overridden methods use File | Settings | File Templates.
 
@@ -39,7 +37,7 @@ public class MyService02 extends Service {
     public void onDestroy() {
         super.onDestroy();    //To change body of overridden methods use File | Settings | File Templates.
 
-        Log.d(TAG," onDestroy ");
+        Log.d("onDestroy",Thread.currentThread().getId() + "");
     }
 
     @Override
@@ -51,7 +49,7 @@ public class MyService02 extends Service {
 
         public void startDownload(){
 
-            Log.d(TAG," start download ... ");
+            Log.d("startDownload",Thread.currentThread().getId() + "");
 
         }
 
