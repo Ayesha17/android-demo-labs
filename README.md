@@ -250,7 +250,7 @@ Service作为Android四大组件之一，在每一个应用程序中都扮演着
 
 ### quick return原理 (比较复杂)
 
-...
+有空深入--！
 
 
 
@@ -265,6 +265,39 @@ Service作为Android四大组件之一，在每一个应用程序中都扮演着
 延伸：
 
 [android应用程序中获取view的位置(绝对位置)](http://my.oschina.net/u/1376187/blog/172792)
+
+
+## ListView demo
+
+
+1. 提升ListView运行效率
+
+解决： viewHolder以及重用view解决
+
+2. listview子item中包含按钮控件，导致listview的OnItemClick失效
+
+解决：在Button控件定义中追加
+
+``
+android:focusable="false"
+android:focusableInTouchMode="false"
+``
+
+
+3. 重绘和刷新的区别
+
+重绘：重新设置adapter，便会重绘ListView。滚动条位置重置。
+
+刷新：只改变adapter数据，则不会重绘ListView，会刷新。滚动条位置不变。
+
+
+
+
+
+
+
+
+
 
 
 
