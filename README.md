@@ -232,6 +232,42 @@ Service作为Android四大组件之一，在每一个应用程序中都扮演着
 ### 参考
 
 《第一行代码》(网络编程章节)
+
+
+## 滚动快速返回(Google Now 搜索) 和 滚动固定位置 (美团立即购买)
+
+
+### sticky原理
+
+使用一个placeholder视图作为占位,高度和宽度与真正需要显示的sticky视图完全一致。对于滚动操作，这里有两种情况需要处理。
+
+第一：滚动没有超出占位所在的Y位置时，那么不需要置顶固定，只需要显示在占位视图所在的位置。
+
+第二：滚动超出占位所在Y位置时，那么则需要置顶固定。
+
+实现的时候分别取占位的getTop和getScrollY。
+
+
+### quick return原理 (比较复杂)
+
+...
+
+
+
+## 参考
+
+[Android View坐标getLeft, getRight, getTop, getBottom解惑](http://blog.csdn.net/kongking0318/article/details/16118213)
+
+[图解Android View的scrollTo(),scrollBy(),getScrollX(), getScrollY()](http://blog.csdn.net/bigconvience/article/details/26697645)
+
+[getViewTreeObserver](http://www.xuebuyuan.com/1293145.html)
+
+延伸：
+
+[android应用程序中获取view的位置(绝对位置)](http://my.oschina.net/u/1376187/blog/172792)
+
+
+
  
 
 
