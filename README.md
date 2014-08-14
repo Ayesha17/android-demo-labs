@@ -292,6 +292,34 @@ android:focusableInTouchMode="false"
 
 
 
+## 向下兼容包 Android Switch(Android2.1++)
+
+
+引用第三方项目（含资源文件）难点：
+
+ Intellij如何引用第三方项目作为主项目使用
+
+Step:
+
+ 1: 先将其以modlue方式导入
+
+ 2：将其在Facets中将其设置为Library module
+
+ 3: 设置原项目的Dependences添加该module
+
+
+[组件地址](https://github.com/BoD/android-switch-backport)
+
+
+
+
+
+
+
+
+
+
+
 
 
 
