@@ -312,6 +312,14 @@ Step:
 
 
 
+## 基础控件
+
+1. TextView
+
+[帮助文档](http://blog.csdn.net/ameyume/article/details/6094287)
+
+
+
 
 
 
