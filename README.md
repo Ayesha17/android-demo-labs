@@ -97,8 +97,9 @@ android-demo-labs
 
 ### demo
 
-1. String/Json/Gson
-2. 图片
+String/Json/Gson
+
+图片
 
 ### 参考
 
@@ -113,22 +114,26 @@ android-demo-labs
 
 ### demo
 
-1. 系统广播之网络状态变更广播【动态注册】
-2. 系统广播之系统启动广播【静态注册】
-3. 自定义广播【静态注册】
-4. 自定义广播之发送有序广播【静态注册】
-5. 自定义本地广播之发送标准广播【动态注册】
+ 系统广播之网络状态变更广播【动态注册】
+ 
+ 系统广播之系统启动广播【静态注册】
+ 
+ 自定义广播【静态注册】
+ 
+ 自定义广播之发送有序广播【静态注册】
+ 
+ 自定义本地广播之发送标准广播【动态注册】
 
 
 ## Small(小而美的功能)
 
 ### demo
 
-1. 退出确认功能
+#### 退出确认功能
 
-2. 全局获取Context
+#### 全局获取Context
 
-3. Intent对象传递
+#### Intent对象传递
 
 
 
@@ -141,46 +146,46 @@ Service作为Android四大组件之一，在每一个应用程序中都扮演着
 
 ### demo
 
-1. 服务的启动/停止(Activity与Service弱关联)
+#### 服务的启动/停止(Activity与Service弱关联)
 
 >简单使用Activity启动Service
 
-2. 服务的绑定/解绑(Activity与Service强关联)
+#### 服务的绑定/解绑(Activity与Service强关联)
 
 >指定Service执行某具体任务
 
-3. 标准Service
+#### 标准Service
 
 >Service内创建子线程来执行任务
 
-4. 前台Service的启动/停止
+#### 前台Service的启动/停止
 
 >防止内存不足而被回收，而前台service不会被回收
 
-5. 远程Service
+#### 远程Service
 
 >跨进程共享Service(demo略)
 
-6. IntentService
+#### IntentService
 
 > 综合了标准service以及自动关闭service(stopself)的优点而出现的
 
-7. 最佳实践(定时执行任务)
+#### 最佳实践(定时执行任务)
 
 两种方案：
 
-1. 无需setRepeating
+无需setRepeating
 
-2. 需要setRepeating
+需要setRepeating
 
 
 ### 重点
 
 关于service生命周期
 
-1. 如果service分别由bind和start方式启动，那么销毁该service必须经过unbind以及stop该service
+#### 如果service分别由bind和start方式启动，那么销毁该service必须经过unbind以及stop该service
 
-2. service其实是在主线程中工作的，为此需要在子线程中进行耗时操作
+#### service其实是在主线程中工作的，为此需要在子线程中进行耗时操作
 
 
 ### 参考
@@ -204,7 +209,7 @@ Service作为Android四大组件之一，在每一个应用程序中都扮演着
 
 ### Demo
 
-1. Thread + Handler
+#### Thread + Handler
 
 
 ### 参考
@@ -218,13 +223,13 @@ Service作为Android四大组件之一，在每一个应用程序中都扮演着
 
 ### Demo
 
-1. HttpURLConnection请求
+#### HttpURLConnection请求
 
 
-2. HttpClient请求
+#### HttpClient请求
 
 
-3. HttpURLConnection最佳实践
+#### HttpURLConnection最佳实践
 
 > 耗时操作必须在子线程操作否则会堵塞主线程。然而正因为在子线程中操作，网络请求返回的结果不可能直接通过return返回()。为此引进回调机制。
 
@@ -270,11 +275,11 @@ Service作为Android四大组件之一，在每一个应用程序中都扮演着
 ## ListView demo
 
 
-1. 提升ListView运行效率
+### 提升ListView运行效率
 
 解决： viewHolder以及重用view解决
 
-2. listview子item中包含按钮控件，导致listview的OnItemClick失效
+### listview子item中包含按钮控件，导致listview的OnItemClick失效
 
 解决：在Button控件定义中追加
 
@@ -314,17 +319,16 @@ Step:
 
 ## 基础控件
 
-1. TextView
+### TextView
 
 [帮助文档](http://blog.csdn.net/ameyume/article/details/6094287)
 
-2. Button
+#### Button
 
 按钮响应以及按钮样式
-
 [帮助文档](http://developer.android.com/guide/topics/ui/controls/button.html)
 
-3. EditText
+### EditText
 
 定义键盘的表现形式(InputType),定制键盘指定的Action，创建自动提(AutoCompleteTextView)
 
@@ -332,11 +336,11 @@ Step:
 
 [帮助文档](http://developer.android.com/guide/topics/ui/controls/text.html)
 
-4. CheckBox | Radio
+### CheckBox | Radio
 
-5. Spinners(下拉)
+### Spinners(下拉)
 
-6. timepicker/datepicker 
+### timepicker/datepicker 
 
 
 
