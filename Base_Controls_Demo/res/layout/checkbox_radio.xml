@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:tag="control">
+
+    <CheckBox   android:id="@+id/timing_push_check_box"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="定时推送"
+                android:onClick="onCheckedClick"
+            />
+
+    <CheckBox   android:id="@+id/timing_shut_check_box"
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:text="定时关机"
+                android:onClick="onCheckedClick"
+            />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+        <RadioButton android:id="@+id/radio_pirates"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="男"
+                     android:onClick="onRadioButtonClicked"/>
+        <RadioButton android:id="@+id/radio_ninjas"
+                     android:layout_width="wrap_content"
+                     android:layout_height="wrap_content"
+                     android:text="女"
+                     android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+</LinearLayout>

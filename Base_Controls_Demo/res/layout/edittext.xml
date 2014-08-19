@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:tag="control">
+
+    <EditText android:layout_height="wrap_content"
+              android:layout_width="match_parent"
+              android:hint="text hint"
+              android:inputType="text"
+            />
+
+    <EditText android:layout_height="wrap_content"
+              android:layout_width="match_parent"
+              android:hint="email hint"
+              android:inputType="textEmailAddress"
+            />
+
+    <EditText android:layout_height="wrap_content"
+              android:layout_width="match_parent"
+              android:hint="phone hint"
+              android:inputType="phone"
+            />
+
+    <EditText
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="postal_address_hint"
+            android:capitalize="sentences"
+            android:inputType="textPassword" />
+
+    <EditText
+            android:id="@+id/capitalize_et"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:capitalize="words"
+            android:hint="postal_address_hint"
+            android:inputType="textPostalAddress|textCapWords|textNoSuggestions" />
+
+    <EditText
+            android:id="@+id/password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="postal_address_hint"
+            android:inputType="textPassword"
+            android:imeOptions="actionSearch"
+            />
+
+
+    <AutoCompleteTextView
+            android:id="@+id/country_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="国家名称"
+            android:inputType="text"
+            />
+
+</LinearLayout>

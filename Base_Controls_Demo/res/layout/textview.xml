@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:tag="control">
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="10dp"
+            android:text="「文档管理」侧重的是计算机本地文档的组织、检索和存储，「数据管理」侧重的是数据在不同位置的流转和控制，从一台计算机到另一台计算机，从主机到备份硬盘，从本地到云端，以及从软件到软件。数据的流动不仅带来安全和便利，还携带着我们的使用习惯、工作场景和喜好。这一节我们聊聊Mac软件中涉及到数据管理应用：迁移助手、Time Machine、iTunes、iCloud，1Password。"
+            android:gravity="center"/>
+
+    <View
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="?android:attr/listDivider" />
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="www.baidu.com"
+            android:autoLink="web"
+            android:gravity="center"/>
+
+    <View
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="?android:attr/listDivider" />
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="www.baidu.com"
+            android:password="true"
+            android:gravity="center"/>
+
+    <View
+            android:layout_marginTop="10dp"
+            android:layout_width="fill_parent"
+            android:layout_height="1px"
+            android:background="?android:attr/listDivider" />
+
+    <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="「文档管理」侧重的是计算机本地文档的组织、检索和存储，「数据管理」侧重的是数据在不同位置的流转和控制，从一台计算机到另一台计算机，从主机到备份硬盘，从本地到云端，以及从软件到软件。数据的流动不仅带来安全和便利，还携带着我们的使用习惯、工作场景和喜好。这一节我们聊聊Mac软件中涉及到数据管理应用：迁移助手、Time Machine、iTunes、iCloud，1Password。"
+            android:phoneNumber="true"
+            android:singleLine="true"
+            android:gravity="center"/>
+</LinearLayout>

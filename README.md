@@ -318,6 +318,32 @@ Step:
 
 [帮助文档](http://blog.csdn.net/ameyume/article/details/6094287)
 
+2. Button
+
+按钮响应以及按钮样式
+
+[帮助文档](http://developer.android.com/guide/topics/ui/controls/button.html)
+
+3. EditText
+
+定义键盘的表现形式(InputType),定制键盘指定的Action，创建自动提(AutoCompleteTextView)
+
+注：inputType中的textCapSentences|textCapWords在4.2上没有作用。经验证其他同仁也又类似问题发生。
+
+[帮助文档](http://developer.android.com/guide/topics/ui/controls/text.html)
+
+4. CheckBox | Radio
+
+5. Spinners(下拉)
+
+6. timepicker/datepicker 
+
+
+
+
+
+
+
 
 
 
