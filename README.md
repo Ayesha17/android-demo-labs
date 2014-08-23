@@ -60,6 +60,13 @@ android-demo-labs
 多任务异步下载,自定义scrollView,图片压缩等
 
 
+#### 图片处理流程：
+
+网络图片/sd卡图片/资源图片 -----BitmapFactory----> BitMap
+
+当然为了避免OO，在生成BitMap的之前(在分配内存之前)，合理压缩图片的大小。一般情况下都会指定高度和宽度进行图片现实。
+
+
 ### 参考
 
 [Android瀑布流照片墙实现，体验不规则排列的美感](http://blog.csdn.net/guolin_blog/article/details/10470797)
@@ -67,6 +74,15 @@ android-demo-labs
 [Android异步消息处理机制完全解析，带你从源码的角度彻底理解](http://blog.csdn.net/guolin_blog/article/details/9991569)
 
 [Android AsyncTask完全解析，带你从源码的角度彻底理解](http://blog.csdn.net/guolin_blog/article/details/11711405)
+
+### 相关库
+
+[ImageLoader](https://github.com/novoda/ImageLoader)
+
+[picasso](https://github.com/square/picasso)
+
+[Universal Image Loader](https://github.com/nostra13/Android-Universal-Image-Loader)
+
 
 
 
@@ -341,6 +357,24 @@ Step:
 ### Spinners(下拉)
 
 ### timepicker/datepicker 
+
+
+## NineOldAndroid(第三方动画库)
+
+### 介绍
+
+Android library for using the Honeycomb (Android 3.0) animation API on all versions of the platform back to 1.0!
+
+### DEMO
+
+1. 旋转，渐变，滑动等基础动画使用
+
+2. 动画菜单最佳实践
+
+### 参考
+
+[Android动画进阶—使用开源动画库nineoldandroids](http://blog.csdn.net/singwhatiwanna/article/details/17639987)
+[官网](http://nineoldandroids.com/)
 
 
 

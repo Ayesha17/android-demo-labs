@@ -339,8 +339,8 @@ public class MyScrollView extends ScrollView implements OnTouchListener {
 				downloadImage(imageUrl);
 			}
 			if (imageUrl != null) {
-				Bitmap bitmap = ImageLoader.decodeSampledBitmapFromResource(
-						imageFile.getPath(), columnWidth);
+				Bitmap bitmap = ImageLoader.decodeSampledBitmapFromFile(
+                        imageFile.getPath(), columnWidth);
 				if (bitmap != null) {
 					imageLoader.addBitmapToMemoryCache(imageUrl, bitmap);
 					return bitmap;
@@ -464,8 +464,8 @@ public class MyScrollView extends ScrollView implements OnTouchListener {
 				}
 			}
 			if (imageFile != null) {
-				Bitmap bitmap = ImageLoader.decodeSampledBitmapFromResource(
-						imageFile.getPath(), columnWidth);
+				Bitmap bitmap = ImageLoader.decodeSampledBitmapFromFile(
+                        imageFile.getPath(), columnWidth);
 				if (bitmap != null) {
 					imageLoader.addBitmapToMemoryCache(imageUrl, bitmap);
 				}
