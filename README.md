@@ -378,6 +378,12 @@ Android library for using the Honeycomb (Android 3.0) animation API on all versi
 
 
 
+## 自定义控件和View
+
+1. 自定义标题栏
+
+
+
 
 
 
