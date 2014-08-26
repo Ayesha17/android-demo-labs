@@ -384,7 +384,44 @@ Android library for using the Honeycomb (Android 3.0) animation API on all versi
 
 
 
+## Android数据存储
 
+### 介绍
+
+数据的持久化方案：将数据保存到存储设备上。
+
+### 方式
+
+#### File IO
+
+#### SharedPreferences
+
+#### SQLite
+
+1. 批量插入
+
+效率：
+
+不开启事务 <  开启事务 < 开启事务 + Statement
+
+2. cursor的关闭(防止内存泄漏)
+
+cursor关闭不了的情况：在close之前抛出异常。
+
+参考:
+
+[Android学习系列(32)--App调试内存泄露之Cursor篇](http://www.cnblogs.com/qianxudetianxia/archive/2012/11/19/2757376.html)
+[How to properly close a cursor in android](http://stackoverflow.com/questions/12950725/how-to-properly-close-a-cursor-in-android)
+
+3. database如何关闭
+
+查了较多资料，感觉没有明确的指出database是否该关闭。暂且搁置。
+
+参考：
+
+[SQLiteDatabase close() function causing NullPointerException when multiple threads](http://stackoverflow.com/questions/7999075/sqlitedatabase-close-function-causing-nullpointerexception-when-multiple-threa)
+
+注：生成SQLiteDataBase实例必须引入上下文，因此在Activity层进行Dao的实例化。
 
 
 
