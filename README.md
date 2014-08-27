@@ -383,16 +383,6 @@ Android library for using the Honeycomb (Android 3.0) animation API on all versi
 1. 自定义标题栏
 
 
-## Android数据库存储
-
-### SQLite
-
-
-参考：
-[Android 中的 SQLite 数据库支持](http://objccn.io/issue-11-5/)
-
-
-
 
 ## Android数据存储
 
@@ -422,6 +412,7 @@ cursor关闭不了的情况：在close之前抛出异常。
 
 [Android学习系列(32)--App调试内存泄露之Cursor篇](http://www.cnblogs.com/qianxudetianxia/archive/2012/11/19/2757376.html)
 [How to properly close a cursor in android](http://stackoverflow.com/questions/12950725/how-to-properly-close-a-cursor-in-android)
+[Android 中的 SQLite 数据库支持](http://objccn.io/issue-11-5/)
 
 3. database如何关闭
 
@@ -434,7 +425,9 @@ cursor关闭不了的情况：在close之前抛出异常。
 注：生成SQLiteDataBase实例必须引入上下文，因此在Activity层进行Dao的实例化。
 
 
+## Android Widget
 
+### SeekBar
 
 
 
