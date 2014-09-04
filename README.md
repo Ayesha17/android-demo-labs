@@ -151,6 +151,8 @@ String/Json/Gson
 
 #### Intent对象传递
 
+#### 利用泛型方便获取布局元素
+
 
 
 
@@ -428,6 +430,9 @@ cursor关闭不了的情况：在close之前抛出异常。
 ## Android Widget
 
 ### SeekBar
+
+
+### ProgressBar的简单使用
 
 
 

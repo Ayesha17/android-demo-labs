@@ -13,6 +13,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".SeekBarActivity" />
+        <activity android:name=".ProgressDialogActivity"/>
 
     </application>
 </manifest>

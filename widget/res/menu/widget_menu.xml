@@ -8,5 +8,10 @@
             android:showAsAction="never"
             android:title="seekbar"/>
 
+    <item
+            android:id="@+id/progress_menu"
+            android:orderInCategory="4"
+            android:showAsAction="never"
+            android:title="progress"/>
 
 </menu>

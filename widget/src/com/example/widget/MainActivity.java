@@ -31,6 +31,10 @@ public class MainActivity extends Activity {
             case R.id.seekbar_menu:
                 SeekBarActivity.actionStart(this);
                 break;
+            case R.id.progress_menu:
+                ProgressDialogActivity.actionStart(this);
+                break;
+
         }
 
 
