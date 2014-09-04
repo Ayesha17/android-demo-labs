@@ -307,11 +307,15 @@ android:focusableInTouchMode="false"
 ``
 
 
-3. 重绘和刷新的区别
+重绘和刷新的区别
 
 重绘：重新设置adapter，便会重绘ListView。滚动条位置重置。
 
 刷新：只改变adapter数据，则不会重绘ListView，会刷新。滚动条位置不变。
+
+### 增加自定义SimpleBaseAdapter<T> 
+
+> 目的：利用泛型和抽象使得代码更清爽
 
 
 
