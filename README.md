@@ -151,6 +151,8 @@ String/Json/Gson
 
 #### Intent对象传递
 
+#### 利用泛型方便获取布局元素
+
 
 
 
@@ -305,11 +307,15 @@ android:focusableInTouchMode="false"
 ``
 
 
-3. 重绘和刷新的区别
+重绘和刷新的区别
 
 重绘：重新设置adapter，便会重绘ListView。滚动条位置重置。
 
 刷新：只改变adapter数据，则不会重绘ListView，会刷新。滚动条位置不变。
+
+### 增加自定义SimpleBaseAdapter<T> 
+
+> 目的：利用泛型和抽象使得代码更清爽
 
 
 
@@ -412,6 +418,7 @@ cursor关闭不了的情况：在close之前抛出异常。
 
 [Android学习系列(32)--App调试内存泄露之Cursor篇](http://www.cnblogs.com/qianxudetianxia/archive/2012/11/19/2757376.html)
 [How to properly close a cursor in android](http://stackoverflow.com/questions/12950725/how-to-properly-close-a-cursor-in-android)
+[Android 中的 SQLite 数据库支持](http://objccn.io/issue-11-5/)
 
 3、database如何关闭
 
@@ -424,8 +431,20 @@ cursor关闭不了的情况：在close之前抛出异常。
 注：生成SQLiteDataBase实例必须引入上下文，因此在Activity层进行Dao的实例化。
 
 
+## Android Widget
+
+### SeekBar
 
 
+### ProgressBar的简单使用
+
+
+
+## 第三方日历库(android-times-square)
+
+![Screenshot](android-times-square-lib/timesSquareScreenshot.png)
+
+[项目地址](https://github.com/square/android-times-square)
 
 
 

@@ -6,10 +6,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+import com.example.small.util.ViewFinder;
 import com.example.small.vo.Person;
 import com.example.small.vo.User;
 
-public class MainActivity extends Activity implements View.OnClickListener{
+public class MainActivity extends BaseActivity implements View.OnClickListener{
 
     private Button exitBtn;
     private Button intentObjTransferBtn;
@@ -19,8 +20,11 @@ public class MainActivity extends Activity implements View.OnClickListener{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        exitBtn = (Button)findViewById(R.id.exit_btn);
-        intentObjTransferBtn = (Button)findViewById(R.id.intent_obj_transfer_btn);
+        ViewFinder viewFinder = new ViewFinder(this);
+        viewFinder.find(R.id.exit_btn);
+
+        exitBtn = getView(R.id.exit_btn);
+        intentObjTransferBtn = getView(R.id.intent_obj_transfer_btn);
 
         exitBtn.setOnClickListener(this);
         intentObjTransferBtn.setOnClickListener(this);
