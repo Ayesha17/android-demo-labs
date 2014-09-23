@@ -28,6 +28,16 @@
             android:enabled="false"
             android:background="@drawable/button_custom" />
 
+
+    <Button
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="50dp"
+            android:background="@drawable/button_custom"
+            android:text="21212"
+            android:textSize="18sp"/>
+
     <ToggleButton
             android:id="@+id/toggle_btn"
             android:layout_width="wrap_content"

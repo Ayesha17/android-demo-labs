@@ -10,16 +10,18 @@
         </shape>
     </item>
 
-    <item android:state_enabled="false">
+    <!--<item android:state_enabled="false">
         <shape
                 android:shape="rectangle" >
             <corners android:radius="3dp" />
-            <solid android:color="#ffffff" />
+            <solid android:color="#2897ed" />
             <stroke
                     android:width="0.5dp"
-                    android:color="#ffffff" />
+                    android:color="#2897ed" />
         </shape>
-    </item>
+    </item>-->
+
+    <item android:drawable="@color/darker_blue" android:state_enabled="false"/>
 
     <item >
         <shape android:shape="rectangle" >
