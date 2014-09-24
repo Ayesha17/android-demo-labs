@@ -153,6 +153,12 @@ String/Json/Gson
 
 #### 利用泛型方便获取布局元素
 
+#### 动态添加元素(Activity03)
+
+1. 在原有布局上添加新的子元素
+
+2. 动态修改子元素margin
+
 
 
 
@@ -447,8 +453,14 @@ cursor关闭不了的情况：在close之前抛出异常。
 [项目地址](https://github.com/square/android-times-square)
 
 
+## litepal(开源的Android数据库框架，它采用了对象关系映射(ORM)的模式)
 
 
+
+参考：
+
+1.github:[litepal](https://github.com/LitePalFramework/LitePal#latest-downloads)
+2.blog：[Android数据库高手秘籍(二)——创建表和LitePal的基本用法](http://blog.csdn.net/guolin_blog/article/details/38556989)
 
 
 

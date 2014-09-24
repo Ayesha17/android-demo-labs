@@ -18,6 +18,11 @@
     <Button android:id="@+id/intent_obj_transfer_btn"
             android:text="intent对象传递(序列化/分解方式)"
             android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"/>
+    <Button android:id="@+id/dynamic_add_view"
+            android:text="动态添加子元素"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
 

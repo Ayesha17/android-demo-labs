@@ -14,6 +14,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 
     private Button exitBtn;
     private Button intentObjTransferBtn;
+    private Button dynamicAddView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 
         exitBtn.setOnClickListener(this);
         intentObjTransferBtn.setOnClickListener(this);
+
+        dynamicAddView = getView(R.id.dynamic_add_view);
+        dynamicAddView.setOnClickListener(this);
 
     }
 
@@ -61,6 +65,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener{
 //                intent02.putExtra("person_data",person);
 
                 break;
+            case R.id.dynamic_add_view:
+
+                Intent intent03 = new Intent(this,Activity03.class);
+                startActivity(intent03);
+                break;
+
 
         }
 
