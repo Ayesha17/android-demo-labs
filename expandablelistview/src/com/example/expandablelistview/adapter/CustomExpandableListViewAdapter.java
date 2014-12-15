@@ -81,7 +81,6 @@ public class CustomExpandableListViewAdapter extends BaseExpandableListAdapter {
         TextView groupDesc = (TextView) v.findViewById(R.id.groupDesc);
         final CheckBox groupCheck = (CheckBox)v.findViewById(R.id.groupCheck);
 
-
         groupCheck.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

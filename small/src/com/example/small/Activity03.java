@@ -21,7 +21,7 @@ public class Activity03 extends Activity {
         setContentView(R.layout.act03);
 
         addView1();
-        addView2();
+//        addView2();
     }
 
     /**
@@ -43,9 +43,10 @@ public class Activity03 extends Activity {
 
         // do add
         xRoot.addView(child,0);
+//        xRoot.addView(child,1);
 
         // change margin
-        setMargins(child,10,100,100,100);
+//        setMargins(child,10,100,100,100);
     }
 
     /**
