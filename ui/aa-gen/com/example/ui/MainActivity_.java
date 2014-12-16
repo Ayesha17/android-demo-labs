@@ -69,11 +69,26 @@ public final class MainActivity_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        btn01 = ((Button) hasViews.findViewById(id.btn01));
         btn03 = ((Button) hasViews.findViewById(id.btn03));
-        lay = ((LinearLayout) hasViews.findViewById(id.lay));
         btn10 = ((Button) hasViews.findViewById(id.btn10));
+        lay = ((LinearLayout) hasViews.findViewById(id.lay));
         btn02 = ((Button) hasViews.findViewById(id.btn02));
+        btn01 = ((Button) hasViews.findViewById(id.btn01));
+        {
+            View view = hasViews.findViewById(id.btn02);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        MainActivity_.this.btn02();
+                    }
+
+                }
+                );
+            }
+        }
         {
             View view = hasViews.findViewById(id.btn10);
             if (view!= null) {
@@ -83,21 +98,6 @@ public final class MainActivity_
                     @Override
                     public void onClick(View view) {
                         MainActivity_.this.btn10();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = hasViews.findViewById(id.btn01);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        MainActivity_.this.btn01();
                     }
 
                 }
@@ -120,14 +120,14 @@ public final class MainActivity_
             }
         }
         {
-            View view = hasViews.findViewById(id.btn02);
+            View view = hasViews.findViewById(id.btn01);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        MainActivity_.this.btn02();
+                        MainActivity_.this.btn01();
                     }
 
                 }

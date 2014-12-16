@@ -12,6 +12,6 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name="com.example.ui.MatrixActivity_"/>
+        <activity android:name="com.example.ui.MatrixActivity_" android:theme="@style/TransparentActivity"/>
     </application>
 </manifest>

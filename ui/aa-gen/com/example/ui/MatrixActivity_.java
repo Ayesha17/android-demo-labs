@@ -73,22 +73,22 @@ public final class MatrixActivity_
 
     @Override
     public void onViewChanged(HasViews hasViews) {
-        btn1 = ((Button) hasViews.findViewById(id.btn1));
-        iv1 = ((ImageView) hasViews.findViewById(id.iv1));
+        btn2 = ((Button) hasViews.findViewById(id.btn2));
         iv2 = ((ImageView) hasViews.findViewById(id.iv2));
         btn3 = ((Button) hasViews.findViewById(id.btn3));
         btn5 = ((Button) hasViews.findViewById(id.btn5));
         btn4 = ((Button) hasViews.findViewById(id.btn4));
-        btn2 = ((Button) hasViews.findViewById(id.btn2));
+        btn1 = ((Button) hasViews.findViewById(id.btn1));
+        iv1 = ((ImageView) hasViews.findViewById(id.iv1));
         {
-            View view = hasViews.findViewById(id.btn3);
+            View view = hasViews.findViewById(id.btn4);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        MatrixActivity_.this.btn3();
+                        MatrixActivity_.this.btn4();
                     }
 
                 }
@@ -111,29 +111,14 @@ public final class MatrixActivity_
             }
         }
         {
-            View view = hasViews.findViewById(id.btn1);
+            View view = hasViews.findViewById(id.btn3);
             if (view!= null) {
                 view.setOnClickListener(new OnClickListener() {
 
 
                     @Override
                     public void onClick(View view) {
-                        MatrixActivity_.this.btn1();
-                    }
-
-                }
-                );
-            }
-        }
-        {
-            View view = hasViews.findViewById(id.btn4);
-            if (view!= null) {
-                view.setOnClickListener(new OnClickListener() {
-
-
-                    @Override
-                    public void onClick(View view) {
-                        MatrixActivity_.this.btn4();
+                        MatrixActivity_.this.btn3();
                     }
 
                 }
@@ -149,6 +134,21 @@ public final class MatrixActivity_
                     @Override
                     public void onClick(View view) {
                         MatrixActivity_.this.btn2();
+                    }
+
+                }
+                );
+            }
+        }
+        {
+            View view = hasViews.findViewById(id.btn1);
+            if (view!= null) {
+                view.setOnClickListener(new OnClickListener() {
+
+
+                    @Override
+                    public void onClick(View view) {
+                        MatrixActivity_.this.btn1();
                     }
 
                 }
