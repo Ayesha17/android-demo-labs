@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+		xmlns:android = "http://schemas.android.com/apk/res/android"
+		android:id = "@+id/root_layout"
+		android:layout_width = "fill_parent"
+		android:layout_height = "fill_parent"
+		android:orientation = "vertical"
+		>
+
+	<ScrollView
+			android:id="@+id/scroll_view"
+			android:layout_above="@+id/bottom_layout"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+		<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+			<EditText
+					android:id="@+id/edit_text_01"
+					android:layout_width = "fill_parent"
+					android:layout_height = "wrap_content"
+					/>
+
+			<EditText
+					android:id="@+id/edit_text_02"
+					android:layout_below="@+id/edit_text_01"
+					android:layout_width = "fill_parent"
+					android:layout_height = "wrap_content"
+					/>
+
+			<EditText
+					android:id="@+id/edit_text_03"
+					android:layout_below="@+id/edit_text_02"
+					android:layout_width = "fill_parent"
+					android:layout_height = "wrap_content"
+					/>
+
+
+			<LinearLayout
+					android:layout_below="@+id/edit_text_03"
+					android:id="@+id/lay_01"
+					android:layout_width="fill_parent"
+					android:layout_height="100dp">
+				<TextView
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:text="hello "/>
+			</LinearLayout>
+
+		</LinearLayout>
+	</ScrollView>
+
+
+	<LinearLayout
+			android:id = "@+id/bottom_layout"
+			android:layout_width = "match_parent"
+			android:layout_height = "wrap_content"
+			android:orientation = "vertical"
+			android:layout_alignParentBottom="true"
+			>
+
+		<EditText
+				android:visibility="gone"
+				android:layout_width="match_parent"
+				android:lines="10"
+				android:layout_height="wrap_content"/>
+
+		<EditText
+				android:layout_width="match_parent"
+				android:lines="10"
+				android:gravity="top"
+				android:layout_height="wrap_content"/>
+
+		<TextView
+				android:layout_width = "fill_parent"
+				android:layout_height = "wrap_content"
+				android:text = "hello input"
+				android:background = "#77777777"
+				/>
+	</LinearLayout>
+</RelativeLayout>

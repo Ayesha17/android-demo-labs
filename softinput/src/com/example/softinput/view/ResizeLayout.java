@@ -1,0 +1,41 @@
+package com.example.softinput.view;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.util.Log;
+import android.widget.LinearLayout;
+
+/**
+ * ResizeLayout：监听日志而已
+ * @author TechBirds
+ * @date 14-12-29
+ * @time 上午10:05
+ * @vsersion 1.0
+ */
+public class ResizeLayout extends LinearLayout {
+    private static int count = 0;
+
+    public ResizeLayout(Context context, AttributeSet attrs) {
+        super(context, attrs);
+    }
+
+    @Override
+    protected void onSizeChanged(int w, int h, int oldw, int oldh) {
+        super.onSizeChanged(w, h, oldw, oldh);
+
+        Log.e("onSizeChanged " + count++, "=>onResize called! w=" + w + ",h=" + h + ",oldw=" + oldw + ",oldh=" + oldh);
+    }
+
+    @Override
+    protected void onLayout(boolean changed, int l, int t, int r, int b) {
+        super.onLayout(changed, l, t, r, b);
+        Log.e("onLayout " + count++, "=>OnLayout called! l=" + l + ", t=" + t + ",r=" + r + ",b=" + b);
+    }
+
+    @Override
+    protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
+        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+
+        Log.e("onMeasure " + count++, "=>onMeasure called! widthMeasureSpec=" + widthMeasureSpec + ", heightMeasureSpec=" + heightMeasureSpec);
+    }
+}
