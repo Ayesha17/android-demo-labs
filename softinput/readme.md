@@ -48,9 +48,9 @@ OnGestureListener有下面的几个动作：
 
 [Android 手动显示和隐藏软键盘](http://blog.csdn.net/h7870181/article/details/8332991)
 [Android 触摸及手势操作GestureDetector](http://blog.csdn.net/xyz_lmn/article/details/16826669)
+[android使用GestureDetector实现手势下滑关闭页面的效果](http://www.cnblogs.com/yejiurui/p/3803658.html)
 
 
-## 知识点三(事件分发机制event_transfer demo)
 
 
 
