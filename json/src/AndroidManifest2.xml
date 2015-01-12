@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest android:versionCode="103" android:versionName="1.0.3" android:installLocation="internalOnly" package="co.yun56.apps.assistant"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <supports-screens android:anyDensity="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:resizeable="true" />
+    <supports-screens android:anyDensity="true" android:smallScreens="true" android:normalScreens="true" android:largeScreens="true" android:resizeable="true" android:xlargeScreens="true" />
+    <application android:theme="@style/AppTheme" android:label="@string/app_name" android:icon="@drawable/ic_launcher" android:name=".MainApplication" android:debuggable="true" android:allowBackup="true" android:hardwareAccelerated="true" android:supportsRtl="true">
+        <activity android:theme="@*android:style/Theme.NoTitleBar.Fullscreen" android:label="@string/app_name" android:name=".main.activity.SplashActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".main.activity.LauncherActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".main.activity.FirstGuideActivity" android:screenOrientation="portrait" />
+        <activity android:name=".contact.activity.ContactsActivity" android:screenOrientation="portrait" />
+        <activity android:name=".load.activity.old.ContainerLoadAddActivity" android:screenOrientation="portrait" />
+        <activity android:name=".setting.activity.LocSettingActivity" android:screenOrientation="portrait" />
+        <activity android:name=".setting.activity.SwitchRoleActivity" android:screenOrientation="portrait" />
+        <activity android:name=".load.activity.old.LoadDescActivity" android:screenOrientation="portrait" />
+        <activity android:name=".vehicle.activity.VehicleLengthChooseActivity" android:screenOrientation="portrait" />
+        <activity android:name=".vehicle.activity.VehicleTypeMultipleChooseActivity" android:screenOrientation="portrait" />
+        <activity android:name=".main.activity.ChooseCityActivity" android:screenOrientation="portrait" />
+        <activity android:name=".load.activity.old.LoadPublishActivity" android:screenOrientation="portrait" />
+        <activity android:name=".load.activity.old.TruckLoadAddActivity" android:screenOrientation="portrait" />
+        <activity android:name=".chat.activity.ForwardingAddChatActivity" android:screenOrientation="portrait" />
+        <activity android:name=".chat.activity.ForwardingActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".vehicle.activity.VehicleLicenseEditActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".main.activity.VideoActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".setting.activity.AboutActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".user.activity.DrivingLicenceEditActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".user.activity.IdCardAddActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".user.activity.IdentityVerifyActivity" android:screenOrientation="portrait" />
+        <activity android:name=".user.activity.IdentityVerifyResultActivity" android:screenOrientation="portrait" />
+        <activity android:name="co.yun56.apps.lib.activity.ImageShowActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".main.activity.RouteActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".main.activity.MapActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".user.activity.IdCardActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".vehicle.activity.VehicleLicenseActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".user.activity.DrivingLicenceActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".user.activity.IdCardEditActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".main.activity.CardChoseActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".contact.activity.ContactRecConfirmActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".contact.activity.ContactCardChoose1Activity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".vehicle.activity.VehicleTypeChooseActivity" android:screenOrientation="portrait" />
+        <activity android:name=".chat.activity.ChatSettingActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".contact.activity.GroupAddActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".chat.activity.ChatGroupActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".chat.activity.ChatAddActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".user.activity.LoggedOutActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".my.profile.activity.ProfileEditActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".user.activity.SetUserInfoActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".user.activity.SmsCodeActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".user.activity.LoginFragmentActivity" android:screenOrientation="portrait" />
+        <activity android:name=".main.MainActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".main.home.IdentityActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".main.home.PenaltyActivity" android:screenOrientation="portrait" />
+        <activity android:name=".main.home.PenaltyCityChooseActivity" android:screenOrientation="portrait" />
+        <activity android:name=".main.home.PetrolActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".my.profile.activity.ProfileActivity" android:launchMode="singleTask" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" />
+        <activity android:name=".my.payment.activity.AccountActivity" android:screenOrientation="portrait" />
+        <activity android:name=".my.payment.activity.RechargeActivity" android:screenOrientation="portrait" />
+        <activity android:name=".my.payment.activity.WithdrawApplyActivity" android:screenOrientation="portrait" />
+        <activity android:name=".my.payment.activity.WithdrawDetailActivity" android:screenOrientation="portrait" />
+        <activity android:name=".my.payment.activity.RecordActivity" android:screenOrientation="portrait" />
+        <activity android:name=".widget.cropImage.CropImage" android:screenOrientation="portrait" />
+        <activity android:name=".setting.activity.SettingActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".chat.activity.ChatActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustResize" />
+        <activity android:name=".contact.activity.AddContactActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".contact.activity.PhoneSearchActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".contact.activity.PhoneContactActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".contact.activity.DriverInviteActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".contact.activity.ContactInfoActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".contact.activity.ContactCardChooseActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".chat.activity.ChatGroupSettingActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".contact.activity.NewContactActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".chat.activity.ChatToGroupActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".main.activity.LicenceCameraActivity" android:screenOrientation="landscape" />
+        <activity android:name=".main.activity.QrCaptureActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".main.activity.QrLoginActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".main.activity.VideoCaptureActivity" android:screenOrientation="portrait" />
+        <activity android:name=".main.activity.QrShowActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".load.activity.old.DispatchActivity" android:screenOrientation="portrait" />
+        <activity android:name=".load.activity.old.LoadApplyActivity" android:screenOrientation="portrait" />
+        <activity android:name=".load.activity.LoadDispatchFragmentActivity" android:screenOrientation="portrait" />
+        <activity android:name=".fleet.activity.FleetMembersActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".fleet.activity.FleetVehicleActivity" android:launchMode="singleTask" android:screenOrientation="portrait" />
+        <activity android:name=".order.activity.OrderCreateActivity" android:screenOrientation="portrait" />
+        <activity android:name=".load.activity.old.DispatchChooseVehicleActivity" android:screenOrientation="portrait" />
+        <activity android:name=".main.activity.ChooseTimeActivity" android:screenOrientation="portrait" />
+        <activity android:name=".load.activity.old.AddressChooseActivity" android:screenOrientation="portrait" />
+        <activity android:name=".load.activity.old.AddressMapActivity" android:screenOrientation="portrait" />
+        <activity android:name="co.yun56.apps.lib.activity.WebViewDefaultActivity" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="co.yun56.apps.assistant" android:host="message_private_url" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".fleet.activity.FleetMapActivity" android:screenOrientation="portrait" />
+        <activity android:name=".load.activity.old.DispatchVehicleHistoryActivity" android:screenOrientation="portrait" />
+        <activity android:name=".contact.activity.InvitedJoinPlatformActivity" android:screenOrientation="portrait" />
+        <activity android:name=".fleet.activity.FleetChooseJoinActivity" android:screenOrientation="portrait" />
+        <activity android:name=".contact.activity.ContactValidInfoActivity" android:screenOrientation="portrait" />
+        <activity android:name=".contact.activity.ContactChooseFleetShareActivity" android:screenOrientation="portrait" />
+        <activity android:name=".load.activity.old.LoadPublishOnMapActivity" android:screenOrientation="portrait" />
+        <activity android:name=".vehicle.activity.VehicleAddToFleetActivity" android:screenOrientation="portrait" />
+        <activity android:name=".vehicle.activity.VehicleHistoricalLocationActivity" android:screenOrientation="portrait" />
+        <activity android:name=".main.role.RoleGuideActivity" android:screenOrientation="portrait" />
+        <activity android:name=".vehicle.activity.VehiclePlateNumberChooseActivity" android:screenOrientation="portrait" />
+        <activity android:name=".vehicle.activity.VehicleInfoEditActivity" android:screenOrientation="portrait" />
+        <activity android:name=".vehicle.activity.VehicleInfoLicenseEditActivity" android:screenOrientation="portrait" />
+        <activity android:name=".vehicle.activity.VehicleOftenCitiesChooseCity" android:screenOrientation="portrait" />
+        <activity android:name=".fleet.activity.FleetCreateActivity" android:screenOrientation="portrait" />
+        <activity android:name=".vehicle.activity.VehicleAddToFleetResultActivity" android:screenOrientation="portrait" />
+        <activity android:name=".vehicle.activity.VehicleInfoDisplayActivity" android:screenOrientation="portrait" />
+        <activity android:name=".main.role.RoleGuideDisplayActivity" android:screenOrientation="portrait" />
+        <activity android:name=".load.activity.LoadsDashboardActivity" android:screenOrientation="portrait" />
+        <activity android:name=".load.activity.LoadsFinderActivity" android:screenOrientation="portrait" />
+        <activity android:name=".load.activity.LoadComposerActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".load.activity.LoadDispatchActivity" android:screenOrientation="portrait" />
+        <activity android:name=".load.activity.LoadRadarActivity" android:screenOrientation="portrait" />
+        <activity android:name=".load.activity.LoadDetailActivity" android:screenOrientation="portrait" />
+        <activity android:name=".deposit.activity.DepositDashboardActivity" android:screenOrientation="portrait" />
+        <activity android:name=".deposit.activity.DepositPayActivity" android:screenOrientation="portrait" />
+        <activity android:name=".deposit.activity.DepositRequestsActivity" android:screenOrientation="portrait" />
+        <activity android:name=".deposit.activity.DepositHistoryDetailActivity" android:screenOrientation="portrait" />
+        <activity android:name=".deposit.activity.DepositCollectDetailActivity" android:screenOrientation="portrait" />
+        <activity android:name=".deposit.activity.DepositRefundDetailActivity" android:screenOrientation="portrait" />
+        <activity android:name=".deposit.activity.DepositDetainDetailActivity" android:screenOrientation="portrait" />
+        <activity android:name=".order.activity.OrderDispatcherDashboardActivity" android:screenOrientation="portrait" />
+        <activity android:name=".load.activity.LoadsFinderPushActivity" android:screenOrientation="portrait" />
+        <activity android:name=".user.activity.IdentityVerifyUploadPicActivity" android:screenOrientation="portrait" />
+        <activity android:name=".common.activity.ChooseDistrictActivity" android:screenOrientation="portrait" />
+        <activity android:name=".common.activity.DriverInfoActivity" android:screenOrientation="portrait" />
+        <activity android:name=".common.activity.VehicleInfoActivity" android:screenOrientation="portrait" />
+        <activity android:name=".deposit.activity.DepositCollectObjectActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".deposit.activity.DepositCollectRequestActivity" android:screenOrientation="portrait" android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".deposit.activity.DepositPayerDetailActivity" android:screenOrientation="portrait" />
+        <activity android:name=".deposit.activity.DepositPayeeDetailActivity" android:screenOrientation="portrait" />
+        <activity android:name=".deposit.activity.DepositApplyDetainActivity" android:screenOrientation="portrait" android:configChanges="keyboardHidden|orientation" android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".deposit.activity.DepositApplyRefundActivity" android:screenOrientation="portrait" android:configChanges="keyboard|keyboardHidden|orientation|screenSize" android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".order.activity.OrderDispatcherDetailActivity" android:screenOrientation="portrait" />
+        <activity android:name=".order.activity.OrderDriverDetailActivity" android:screenOrientation="portrait" />
+        <activity android:name=".order.activity.OrderDriverDashboardActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.alipay.android.app.sdk.WapPayActivity" android:screenOrientation="portrait" />
+        <activity android:name=".wxapi.WXPayEntryActivity" android:exported="true" android:launchMode="singleTop" />
+        <activity android:name=".vehicle.activity.VehicleDashboardActivity" android:screenOrientation="portrait" />
+        <activity android:name="com.unionpay.uppay.PayActivity" android:screenOrientation="portrait" />
+        <activity android:name=".load.activity.LoadMyApplyActivity" android:screenOrientation="portrait" />
+        <activity android:name=".fleet.activity.FleetVehicleSearchActivity" android:screenOrientation="portrait" />
+        <receiver android:name="co.yun56.apps.assistant.broadcast.BootCompletedReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".broadcast.LoadMessageReceiver">
+            <intent-filter>
+                <action android:name="co.yun56.apps.assistant.service.IM_LOAD_RECEIVER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="co.yun56.apps.assistant.broadcast.InstantMessageReceiver">
+            <intent-filter>
+                <action android:name="co.yun56.apps.assistant.service.IM_RECEIVER" />
+                <action android:name="co.yun56.apps.assistant.service.IM_LOAD_RECEIVER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".broadcast.LocatingAlarmReceiver">
+            <intent-filter>
+                <action android:name="co.yun56.apps.assistant.service.ALARM_RECEIVER" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="co.yun56.apps.lib.im.event.EventReceiver">
+            <intent-filter>
+                <action android:name="co.yun56.apps.assistant.service.PING" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <action android:name="android.intent.action.ACTION_SHUTDOWN" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="co.yun56.apps.lib.deps.wechat.AppRegister">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+        <provider android:name=".db.contentProvider.AppDataProvider" android:authorities="co.yun56.apps.assistant" />
+        <service android:name="co.yun56.apps.assistant.service.IMService" />
+        <service android:name="co.yun56.apps.assistant.service.LocService" />
+        <service android:name="co.yun56.apps.lib.upgrade.AppUpgradeService" />
+        <service android:name="com.baidu.location.f" android:enabled="true" android:process=":remote" />
+        <meta-data android:name="BaiduMobAd_STAT_ID" android:value="16798c4c07" />
+        <meta-data android:name="com.baidu.lbsapi.API_KEY" android:value="kwCxgv7eFQ4fNTfOp52h6TdB" />
+        <meta-data android:name="BAIDUMAP.KEY" android:value="kwCxgv7eFQ4fNTfOp52h6TdB" />
+        <meta-data android:name="BaiduMobAd_CHANNEL" android:value="anzhi market" />
+        <meta-data android:name="APP_ENV" android:value="release" />
+        <meta-data android:name="com.thinkland.juheapi.openid" android:value="JH563981f86e9feefe0feeda69315cc9da" />
+        <meta-data android:name="BaiduMobAd_EXCEPTION_LOG" android:value="true" />
+        <meta-data android:name="BaiduMobAd_SEND_STRATEGY" android:value="APP_START" />
+        <meta-data android:name="BaiduMobAd_ONLY_WIFI" android:value="false" />
+        <meta-data android:name="BaiduMobAd_CELL_LOCATION" android:value="true" />
+        <meta-data android:name="BaiduMobAd_GPS_LOCATION" android:value="true" />
+        <meta-data android:name="BaiduMobAd_WIFI_LOCATION" android:value="true" />
+        <uses-library android:name="android.test.runner" />
+    </application>
+    <instrumentation android:label="Tests for co.yun56.apps.assistant" android:name="android.test.InstrumentationTestRunner" android:targetPackage="co.yun56.apps.assistant" />
+</manifest>
