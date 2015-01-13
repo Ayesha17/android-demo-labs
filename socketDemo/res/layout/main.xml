@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:orientation="vertical"
+			  android:layout_width="fill_parent"
+			  android:layout_height="fill_parent"
+			  android:background="@android:color/white"
+		>
+	<TextView
+			android:id="@+id/msg"
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1"
+			android:gravity="center"
+			android:hint="消息记录"/>
+
+	<Button
+			android:id="@+id/start"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:text="启动IM"/>
+
+	<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+		<EditText
+				android:id="@+id/input"
+				android:layout_gravity="center"
+				android:layout_width="0dp"
+				android:layout_height="wrap_content"
+				android:layout_weight="2"
+				android:hint="輸入发送内容"/>
+		<Button
+				android:id="@+id/send"
+				android:layout_gravity="center"
+				android:layout_width="0dp"
+				android:layout_weight="1"
+				android:layout_height="wrap_content"
+				android:text="发送消息"/>
+	</LinearLayout>
+
+</LinearLayout>
+

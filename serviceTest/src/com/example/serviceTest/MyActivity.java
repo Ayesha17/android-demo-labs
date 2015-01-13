@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import com.example.serviceTest.service.*;
@@ -104,6 +105,7 @@ public class MyActivity extends Activity implements View.OnClickListener{
         serviceIntentStartBtn.setOnClickListener(this);
         serviceAlarmStartBtn.setOnClickListener(this);
 
+        Log.d("Main",Thread.currentThread() + "");
     }
 
     @Override

@@ -27,6 +27,7 @@ public class MyService01 extends Service {
     public int onStartCommand(Intent intent, int flags, int startId) {
 
         Log.d(TAG," onStartCommand ");
+        Log.d("MyService01",Thread.currentThread() + "");
 
         return super.onStartCommand(intent, flags, startId);    //To change body of overridden methods use File | Settings | File Templates.
 
