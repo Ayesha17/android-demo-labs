@@ -67,12 +67,12 @@ public class Client {
             sender.setType(Constant.TICK_TYPE_SEND);
             senderService.submit(sender);
         }
-//        if (listener == null) {
-//            listener = new ListenerConnectThread();
-//            listener.setClient(this);
-//            listener.setType(Constant.TICK_TYPE_LISTEN);
-//            listenerService.submit(listener);
-//        }
+        if (listener == null) {
+            listener = new ListenerConnectThread();
+            listener.setClient(this);
+            listener.setType(Constant.TICK_TYPE_LISTEN);
+            listenerService.submit(listener);
+        }
         return true;
     }
 

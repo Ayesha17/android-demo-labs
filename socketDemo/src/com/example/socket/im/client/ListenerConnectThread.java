@@ -39,8 +39,7 @@ public class ListenerConnectThread extends ConnectThread implements Runnable {
         Intent intent = new Intent(MainApplication.getInstance(),
                 EventReceiver.class);
         intent.setAction(IMService.IMServiceAction.Ping.getName());
-        PendingIntent pendingIntent = PendingIntent
-                .getBroadcast(context, 0, intent, 0);
+        PendingIntent pendingIntent = PendingIntent.getBroadcast(context, 0, intent, 0);
 
         alarmManager.cancel(pendingIntent);
 
